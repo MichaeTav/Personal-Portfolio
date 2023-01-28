@@ -1,0 +1,19 @@
+.projects {
+    height: 1000px;
+    background-color: red;
+}
+
+.skills {
+    height: 1000px;
+    background-color: green;
+}
+
+.about {
+    height: 1000px;
+    background-color: blue;
+}
+
+.navBar {
+    position: sticky;
+    top: 0;
+}

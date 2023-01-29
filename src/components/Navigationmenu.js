@@ -1,36 +1,40 @@
 import React from "react";
 
-import { AppBar, Box, Tabs, Tab } from "@mui/material";
+import { AppBar, Box, Tabs, Tab, Toolbar, Button } from "@mui/material";
 
 const Navigationmenu = ({ scrollToSection, refs }) => {
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-    switch (newValue) {
-      case 0:
-        scrollToSection(refs.projects);
-        break;
-      case 1:
-        scrollToSection(refs.skills);
-        break;
-      case 2:
-        scrollToSection(refs.about);
-        break;
-      default:
-        console.log("BROKEN");
-    }
-  };
-
   return (
-    <div className="navBar">
-      <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
-        <Tabs value={value} onChange={handleChange} centered>
-          <Tab label="Projects" />
-          <Tab label="Skills" />
-          <Tab label="About Me" />
-        </Tabs>
-      </Box>
+    <div>
+      <AppBar component="nav">
+        <Toolbar>
+          <Box>
+            <Button
+              sx={{ color: "#fff" }}
+              onClick={() => {
+                scrollToSection(refs.projects);
+              }}
+            >
+              PROJECTS
+            </Button>
+            <Button
+              sx={{ color: "#fff" }}
+              onClick={() => {
+                scrollToSection(refs.skills);
+              }}
+            >
+              SKILLS
+            </Button>
+            <Button
+              sx={{ color: "#fff" }}
+              onClick={() => {
+                scrollToSection(refs.about);
+              }}
+            >
+              ABOUT
+            </Button>
+          </Box>
+        </Toolbar>
+      </AppBar>
     </div>
   );
 };

@@ -19,24 +19,28 @@ const tools = [githubIcon, chromeIcon, dockerIcon];
 const SkillsContainer = ({ title, icons }) => {
   return (
     <Stack spacing={2}>
-      <h1 className="sectionHeader">{title}</h1>
-      <Paper
-        sx={{
-          backgroundColor: "#252526",
-          maxWidth: "250px",
-          minWidth: "250px",
-          margin: "auto",
-        }}
-        elevation={10}
-      >
-        <Grid container>
-          {icons.map((icon) => (
-            <Grid item xs={6} justifyContent="center" alignItems="center">
-              <img src={icon} className="icon" />
-            </Grid>
-          ))}
-        </Grid>
-      </Paper>
+      <div style={{ zIndex: 1 }}>
+        <h1 className="sectionHeader">{title}</h1>
+      </div>
+      <div style={{ zIndex: 1 }}>
+        <Paper
+          sx={{
+            backgroundColor: "#252526",
+            maxWidth: "250px",
+            minWidth: "250px",
+            margin: "auto",
+          }}
+          elevation={10}
+        >
+          <Grid container>
+            {icons.map((icon) => (
+              <Grid item xs={6} justifyContent="center" alignItems="center">
+                <img src={icon} className="icon" />
+              </Grid>
+            ))}
+          </Grid>
+        </Paper>
+      </div>
     </Stack>
   );
 };

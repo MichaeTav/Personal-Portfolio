@@ -1,6 +1,6 @@
 import React from "react";
 
-import { AppBar, Box, Tabs, Tab } from "@mui/material";
+import { AppBar, Box, Tabs, Tab, Toolbar, Button } from "@mui/material";
 
 const Navigationmenu = ({ scrollToSection, refs }) => {
   const [value, setValue] = React.useState(0);
@@ -23,14 +23,22 @@ const Navigationmenu = ({ scrollToSection, refs }) => {
   };
 
   return (
-    <div className="navBar">
-      <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
-        <Tabs value={value} onChange={handleChange} centered>
-          <Tab label="Projects" />
-          <Tab label="Skills" />
-          <Tab label="About Me" />
-        </Tabs>
-      </Box>
+    <div>
+      <AppBar component="nav">
+        <Toolbar>
+          <Box>
+            <Button sx={{ color: "#fff" }} onClick={handleChange}>
+              PROJECTS
+            </Button>
+            <Button sx={{ color: "#fff" }} onClick={handleChange}>
+              SKILLS
+            </Button>
+            <Button sx={{ color: "#fff" }} onClick={handleChange}>
+              ABOUT
+            </Button>
+          </Box>
+        </Toolbar>
+      </AppBar>
     </div>
   );
 };

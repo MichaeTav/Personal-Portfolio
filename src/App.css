@@ -14,11 +14,6 @@
     background-color: blue;
 }
 
-.navBar {
-    position: sticky;
-    top: 0;
-}
-
 .icon {
     height: 150px;
     width: 150px;

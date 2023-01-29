@@ -10,19 +10,25 @@ const Navigationmenu = ({ scrollToSection, refs }) => {
           <Box>
             <Button
               sx={{ color: "#fff" }}
-              onClick={scrollToSection(refs.projects)}
+              onClick={() => {
+                scrollToSection(refs.projects);
+              }}
             >
               PROJECTS
             </Button>
             <Button
               sx={{ color: "#fff" }}
-              onClick={scrollToSection(refs.skills)}
+              onClick={() => {
+                scrollToSection(refs.skills);
+              }}
             >
               SKILLS
             </Button>
             <Button
               sx={{ color: "#fff" }}
-              onClick={scrollToSection(refs.about)}
+              onClick={() => {
+                scrollToSection(refs.about);
+              }}
             >
               ABOUT
             </Button>

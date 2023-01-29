@@ -5,11 +5,18 @@ import { AppBar, Box, Tabs, Tab, Toolbar, Button } from "@mui/material";
 const Navigationmenu = ({ scrollToSection, refs }) => {
   return (
     <div>
-      <AppBar component="nav">
+      <AppBar
+        component="nav"
+        sx={{
+          alignItems: "center",
+          backgroundColor: "#1E1E1E;",
+        }}
+      >
         <Toolbar>
           <Box>
             <Button
               sx={{ color: "#fff" }}
+              size="large"
               onClick={() => {
                 scrollToSection(refs.projects);
               }}
@@ -18,6 +25,7 @@ const Navigationmenu = ({ scrollToSection, refs }) => {
             </Button>
             <Button
               sx={{ color: "#fff" }}
+              size="large"
               onClick={() => {
                 scrollToSection(refs.skills);
               }}
@@ -26,6 +34,7 @@ const Navigationmenu = ({ scrollToSection, refs }) => {
             </Button>
             <Button
               sx={{ color: "#fff" }}
+              size="large"
               onClick={() => {
                 scrollToSection(refs.about);
               }}

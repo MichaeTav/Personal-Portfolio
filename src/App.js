@@ -1,10 +1,13 @@
 import React from "react";
 import { useRef } from "react";
 
+import { Stack } from "@mui/material";
+
 import Navigationmenu from "./components/Navigationmenu";
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
 import About from "./sections/About";
+import Background from "./sections/Background";
 
 import "./App.css";
 
@@ -28,10 +31,13 @@ const App = () => {
 
   return (
     <div>
-      <Navigationmenu scrollToSection={scrollToSection} refs={refs} />
-      <Projects innerRef={projects} />
-      <Skills innerRef={skills} />
-      <About innerRef={about} />
+      <Stack>
+        <Navigationmenu scrollToSection={scrollToSection} refs={refs} />
+        <Projects innerRef={projects} />
+        <Skills innerRef={skills} />
+        <About innerRef={about} />
+        <Background />
+      </Stack>
     </div>
   );
 };

@@ -15,6 +15,7 @@ const App = () => {
   const refs = { projects: projects, skills: skills, about: about };
 
   const scrollToSection = (elementRef) => {
+    console.log(elementRef);
     window.scrollTo({
       top: elementRef.current.offsetTop - 48,
       behavior: "smooth",

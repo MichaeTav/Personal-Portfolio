@@ -1,7 +1,6 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+
+import { AppBar, Box, Tabs, Tab } from "@mui/material";
 
 const Navigationmenu = ({ scrollToSection, refs }) => {
   const [value, setValue] = React.useState(0);

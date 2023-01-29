@@ -1,11 +1,12 @@
 .projects {
-    height: 1000px;
+    height: 1500px;
     background-color: red;
 }
 
 .skills {
-    height: 1000px;
+    height: 100%;
     background-color: green;
+    padding: 25px 25px 25px 25px;
 }
 
 .about {
@@ -16,4 +17,15 @@
 .navBar {
     position: sticky;
     top: 0;
+}
+
+.icon {
+    height: 150px;
+    width: 150px;
+}
+
+.sectionHeader {
+    font-family: Helvetica;
+    text-align: center;
+    
 }

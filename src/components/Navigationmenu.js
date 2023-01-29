@@ -27,13 +27,22 @@ const Navigationmenu = ({ scrollToSection, refs }) => {
       <AppBar component="nav">
         <Toolbar>
           <Box>
-            <Button sx={{ color: "#fff" }} onClick={handleChange}>
+            <Button
+              sx={{ color: "#fff" }}
+              onClick={scrollToSection(refs.projects)}
+            >
               PROJECTS
             </Button>
-            <Button sx={{ color: "#fff" }} onClick={handleChange}>
+            <Button
+              sx={{ color: "#fff" }}
+              onClick={scrollToSection(refs.skills)}
+            >
               SKILLS
             </Button>
-            <Button sx={{ color: "#fff" }} onClick={handleChange}>
+            <Button
+              sx={{ color: "#fff" }}
+              onClick={scrollToSection(refs.about)}
+            >
               ABOUT
             </Button>
           </Box>

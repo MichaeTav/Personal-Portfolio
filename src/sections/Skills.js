@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Grid, Stack, Box, Paper, Container } from "@mui/material";
+import { Grid, Stack, Paper } from "@mui/material";
 
 import graphqlIcon from "../resources/graphql-icon.png";
 import javaIcon from "../resources/java-icon.png";
@@ -34,8 +34,14 @@ const SkillsContainer = ({ title, icons }) => {
         >
           <Grid container>
             {icons.map((icon) => (
-              <Grid item xs={6} justifyContent="center" alignItems="center">
-                <img src={icon} className="icon" />
+              <Grid
+                item
+                xs={6}
+                justifyContent="center"
+                alignItems="center"
+                key={icon}
+              >
+                <img src={icon} className="icon" alt="" />
               </Grid>
             ))}
           </Grid>
@@ -46,8 +52,6 @@ const SkillsContainer = ({ title, icons }) => {
 };
 
 const Skills = ({ innerRef }) => {
-  const skills = [javaIcon, javaScriptIcon, reactIcon, graphqlIcon, springIcon];
-
   return (
     <div ref={innerRef} className="skills">
       <Stack

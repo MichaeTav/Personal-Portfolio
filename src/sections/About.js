@@ -5,6 +5,7 @@ const About = ({ innerRef }) => {
   return (
     <div ref={innerRef} className="about">
       <Stack>
+        {/* Pushes header to front of components avoiding animation from overlapping */}
         <div style={{ zIndex: 1 }}>
           <h1 className="sectionHeader">ABOUT</h1>
         </div>

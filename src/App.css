@@ -2,7 +2,7 @@
 
 
 .projects {
-    height: 1500px;
+    height: 100%;
     background-color: #1E1E1E;
     padding: 80px 25px 25px 25px;
 }
@@ -10,7 +10,7 @@
 .skills {
     height: 100%;
     background-color: #1E1E1E;
-    padding: 25px 25px 25px 25px;
+    padding: 89px 25px 25px 25px;
 }
 
 .about {
@@ -25,10 +25,29 @@
     width: 100px;
 }
 
+.smallIcon {
+    padding: 20px 20px 20px 20px;
+    height: 50px;
+    width: 50px;
+}
+
 .sectionHeader {
     font-family: Helvetica;
     text-align: center;
     color: #fff;
+    padding-bottom: 20px;
+}
+
+.projectTitle {
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+.projectContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
@@ -37,4 +56,36 @@
     right: 0;
     bottom: 0;
     left: 0;
+}
+
+.projImg {
+    height: 100%;
+    max-height: 400px;
+    display: flex;
+    scroll-snap-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0 20px 20px 0;
+}
+
+.scrollBtn {
+    overflow: hidden;
+}
+
+.imgContainer {
+    position: relative;
+    overflow-x: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    /* height: 100vh; */
+    width: 100%;
+    max-width: 712px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* overflow: hidden; */
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

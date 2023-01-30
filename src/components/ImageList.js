@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef, useState, useEffect } from "react";
 
-import { Button, Container, Stack } from "@mui/material";
+import { Button, Stack } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
@@ -42,6 +42,7 @@ const ImageList = ({ imageList }) => {
         onClick={(event) => {
           scrollTo("prev");
         }}
+        style={{ maxHeight: "100px", minHeight: "100px" }}
       />
       <div className="imgContainer">
         <Stack direction="row">
@@ -57,14 +58,14 @@ const ImageList = ({ imageList }) => {
           ))}
         </Stack>
       </div>
-      <div className="scrollBtn">
-        <Button
-          endIcon={<ArrowForwardIosIcon />}
-          onClick={(event) => {
-            scrollTo("next");
-          }}
-        />
-      </div>
+
+      <Button
+        endIcon={<ArrowForwardIosIcon />}
+        onClick={(event) => {
+          scrollTo("next");
+        }}
+        style={{ maxHeight: "100px", minHeight: "100px" }}
+      />
     </Stack>
   );
 };

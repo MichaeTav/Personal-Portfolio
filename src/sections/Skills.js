@@ -29,10 +29,11 @@ const SkillsContainer = ({ title, icons }) => {
             maxWidth: "250px",
             minWidth: "250px",
             margin: "auto",
+            padding: "30px",
           }}
           elevation={10}
         >
-          <Grid container>
+          <Grid container spacing={6}>
             {icons.map((icon) => (
               <Grid
                 item

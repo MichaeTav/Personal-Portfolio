@@ -1,7 +1,9 @@
 import { Stack } from "@mui/material";
 import React from "react";
+import { BrowserView, MobileView } from "react-device-detect";
 
 import ProjectCard from "../components/ProjectCard";
+import MobileProjectCard from "../components/MobileProjectCard";
 
 import graphqlIcon from "../resources/graphql-icon.png";
 import javaIcon from "../resources/java-icon.png";
@@ -14,9 +16,17 @@ import shrink1 from "../resources/shrinktracker/image1.png";
 import shrink2 from "../resources/shrinktracker/image2.png";
 import shrink3 from "../resources/shrinktracker/image3.png";
 import shrink4 from "../resources/shrinktracker/image4.png";
+import shrink1m from "../resources/shrinktracker/Mobile/image1.png";
+import shrink2m from "../resources/shrinktracker/Mobile/image2.png";
+import shrink3m from "../resources/shrinktracker/Mobile/image3.png";
+import shrink4m from "../resources/shrinktracker/Mobile/image4.png";
+import shrink5m from "../resources/shrinktracker/Mobile/image5.png";
 import sars1 from "../resources/sars/image1.png";
 import sars2 from "../resources/sars/image2.png";
+import sars1m from "../resources/sars/Mobile/image1.png";
+import sars2m from "../resources/sars/Mobile/image2.jpg";
 
+const mobileShrinkImages = [shrink1m, shrink2m, shrink3m, shrink4m, shrink5m];
 const shrinkImages = [shrink1, shrink2, shrink3, shrink4];
 const shrinkIcons = [
   javaIcon,
@@ -30,6 +40,7 @@ const shrinkIcons = [
 const shrinkDescription =
   "ShrinkTracker is a full stack web application that keeps track of perishable items expiration date. It allows for multiple users along with different roles that correspond to the departments you might find in a grocery store. Each user only has access to their department by using role based authentication. One thing I would like to add to this project is the ability to upload images for each product and store them in S3.";
 
+const mobileSarsImages = [sars2m, sars1m];
 const sarsImages = [sars2, sars1];
 const sarsIcons = [javaScriptIcon];
 const sarsDescription =
@@ -43,17 +54,35 @@ const Projects = ({ innerRef }) => {
       <Stack justifyContent="center" alignItems="center">
         <div className="projectContainer" style={{ zIndex: 1 }}>
           <h1 className="sectionHeader projectTitle">SHRINK TRACKER</h1>
-          <ProjectCard
-            description={shrinkDescription}
-            imageList={shrinkImages}
-            iconList={shrinkIcons}
-          />
+          <BrowserView>
+            <ProjectCard
+              description={shrinkDescription}
+              imageList={shrinkImages}
+              iconList={shrinkIcons}
+            />
+          </BrowserView>
+          <MobileView>
+            <MobileProjectCard
+              description={shrinkDescription}
+              imageList={mobileShrinkImages}
+              iconList={shrinkIcons}
+            />
+          </MobileView>
           <h1 className="sectionHeader projectTitle">SARS NOTIFICATIONS</h1>
-          <ProjectCard
-            description={sarsDescription}
-            imageList={sarsImages}
-            iconList={sarsIcons}
-          />
+          <BrowserView>
+            <ProjectCard
+              description={sarsDescription}
+              imageList={sarsImages}
+              iconList={sarsIcons}
+            />
+          </BrowserView>
+          <MobileView>
+            <MobileProjectCard
+              description={sarsDescription}
+              imageList={mobileSarsImages}
+              iconList={sarsIcons}
+            />
+          </MobileView>
         </div>
       </Stack>
     </div>

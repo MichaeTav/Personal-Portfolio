@@ -28,6 +28,18 @@ const About = ({ innerRef }) => {
               <Typography variant="h6" color="#fff">
                 {description}
               </Typography>
+              <Typography variant="h6" color="#fff">
+                Feel free to contact me on{" "}
+                <a
+                  href="https://www.linkedin.com/in/michael-tavera-969b8514b"
+                  style={{ color: "inherit", textDecoration: "underline" }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+                .
+              </Typography>
             </Stack>
           </Paper>
         </div>

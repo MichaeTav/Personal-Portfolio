@@ -37,12 +37,14 @@ const shrinkIcons = [
   materialuiIcon,
   mongodbIcon,
 ];
+const shrinkCodeLink = "https://github.com/MichaeTav/ShrinkTracker";
 const shrinkDescription =
   "ShrinkTracker is a full stack web application that keeps track of perishable items expiration date. It allows for multiple users along with different roles that correspond to the departments you might find in a grocery store. Each user only has access to their department by using role based authentication. One thing I would like to add to this project is the ability to upload images for each product and store them in S3.";
 
 const mobileSarsImages = [sars2m, sars1m];
 const sarsImages = [sars2, sars1];
 const sarsIcons = [javaScriptIcon];
+const sarsCodeLink = "https://github.com/MichaeTav/SARS-Notifications";
 const sarsDescription =
   "SARS Notifications is a browser extension that enables sound notifications when a new student enters the drop in list for SARS(an online student management system). It can only be turned on once the correct webpage is open and allows for volume adjustment. The values for the volume persist through local storage in the browser allowing for the users choice of volume to be saved.";
 
@@ -59,6 +61,7 @@ const Projects = ({ innerRef }) => {
               description={shrinkDescription}
               imageList={shrinkImages}
               iconList={shrinkIcons}
+              codeLink={shrinkCodeLink}
             />
           </BrowserView>
           <MobileView>
@@ -66,6 +69,7 @@ const Projects = ({ innerRef }) => {
               description={shrinkDescription}
               imageList={mobileShrinkImages}
               iconList={shrinkIcons}
+              codeLink={shrinkCodeLink}
             />
           </MobileView>
           <h1 className="sectionHeader projectTitle">SARS NOTIFICATIONS</h1>
@@ -74,6 +78,7 @@ const Projects = ({ innerRef }) => {
               description={sarsDescription}
               imageList={sarsImages}
               iconList={sarsIcons}
+              codeLink={sarsCodeLink}
             />
           </BrowserView>
           <MobileView>
@@ -81,6 +86,7 @@ const Projects = ({ innerRef }) => {
               description={sarsDescription}
               imageList={mobileSarsImages}
               iconList={sarsIcons}
+              codeLink={sarsCodeLink}
             />
           </MobileView>
         </div>

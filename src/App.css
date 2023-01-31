@@ -30,6 +30,13 @@
     width: 50px;
 }
 
+.linkToCodeIcon {
+    display: block;
+    margin: 20px auto;
+    height: 50px;
+    width: 50px;
+}
+
 .mobileIcon {
     padding: 20px 5px 20px 5px;
     height: 25px;

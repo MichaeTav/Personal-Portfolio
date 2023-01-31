@@ -3,8 +3,9 @@ import React from "react";
 import { CardContent, Stack, Typography, Paper } from "@mui/material";
 
 import ImageList from "./ImageList";
+import githubIcon from "../resources/github-icon.png";
 
-const MobileProjectCard = ({ description, imageList, iconList }) => {
+const MobileProjectCard = ({ description, imageList, iconList, codeLink }) => {
   return (
     <Stack>
       <div style={{ zIndex: 1 }}>
@@ -18,6 +19,13 @@ const MobileProjectCard = ({ description, imageList, iconList }) => {
           }}
           elevation={10}
         >
+          <a href={codeLink} target="_blank" rel="noopener noreferrer">
+            <img
+              className="linkToCodeIcon"
+              src={githubIcon}
+              alt="Link to code"
+            />
+          </a>
           <ImageList imageList={imageList} />
           <CardContent>
             <Typography variant="body2" color="#fff">

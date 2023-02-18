@@ -50,8 +50,8 @@ const ImageList = ({ imageList }) => {
             <div>
               <img
                 className="projImg"
-                src={image}
-                key={i}
+                src={image.image}
+                key={image.key}
                 ref={(el) => (imageRef.current[i] = el)}
               />
             </div>

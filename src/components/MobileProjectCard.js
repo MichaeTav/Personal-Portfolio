@@ -34,7 +34,12 @@ const MobileProjectCard = ({ description, imageList, iconList, codeLink }) => {
           </CardContent>
           <Stack direction="row" justifyContent="center">
             {iconList.map((icon) => (
-              <img className="mobileIcon" src={icon} alt="" />
+              <img
+                className="mobileIcon"
+                src={icon.image}
+                alt=""
+                key={icon.key}
+              />
             ))}
           </Stack>
         </Paper>

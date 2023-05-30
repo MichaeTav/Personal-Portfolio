@@ -28,17 +28,20 @@ const Project = () => {
 
   useEffect(() => {
     switch (projectName) {
-      case "shrinktracker":
-        setProject(projects[2]);
-        break;
-      case "govsort":
+      case "personalwebsite":
         setProject(projects[0]);
         break;
-      case "discordbot":
+      case "shrinktracker":
+        setProject(projects[3]);
+        break;
+      case "govsort":
         setProject(projects[1]);
         break;
+      case "discordbot":
+        setProject(projects[2]);
+        break;
       case "sarsnotifications":
-        setProject(projects[3]);
+        setProject(projects[4]);
         break;
       default:
         navigate("/");

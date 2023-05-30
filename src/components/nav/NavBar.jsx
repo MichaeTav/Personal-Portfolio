@@ -78,7 +78,7 @@ const NavBar = () => {
         >
           Experience
         </Tab>
-        <Tab
+        {/* <Tab
           _selected={{
             color: "white",
             fontWeight: "bold",
@@ -88,7 +88,7 @@ const NavBar = () => {
           isDisabled
         >
           Blog
-        </Tab>
+        </Tab> */}
       </TabList>
       <TabIndicator height="5px" bg="blue.500" borderRadius="5px" />
     </Tabs>

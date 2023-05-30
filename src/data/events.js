@@ -7,6 +7,17 @@ import rri from "../assets/rri-logo.jpg";
 const projects = [
   {
     type: "project",
+    title: "Personal Website",
+    commentURL: "/personalwebsite",
+    githubCommentTitle: "personalwebsite",
+    dateCompleted: new Date("2023-05-26"),
+    description:
+      "The website you are currently on. This is the second version of my site and you can see the first version on the github branch v1. I created a new version to simplify the design and use new frameworks. It was created using Vite, React, and ChakraUI and is currently hosted using Cloudflare pages.",
+    githubURL: "https://github.com/MichaeTav/personal-portfolio",
+    demoURL: "https://michaeltavera.dev/",
+  },
+  {
+    type: "project",
     title: "GovSort",
     commentURL: "/govsort",
     githubCommentTitle: "govsort",

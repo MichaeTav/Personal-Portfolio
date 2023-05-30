@@ -44,7 +44,7 @@ const ProfileHeader = () => {
               </Circle>
             </Box>
 
-            <Tooltip label="Message">
+            {/* <Tooltip label="Message">
               <Circle
                 size="40px"
                 borderWidth="2px"
@@ -52,7 +52,7 @@ const ProfileHeader = () => {
               >
                 <AiOutlineMail size="1.25rem" />
               </Circle>
-            </Tooltip>
+            </Tooltip> */}
           </HStack>
           <Text fontSize="xl" fontWeight="bold">
             Michael Tavera

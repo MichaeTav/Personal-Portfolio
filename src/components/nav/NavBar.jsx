@@ -1,41 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Tabs, TabList, Tab, TabIndicator } from "@chakra-ui/react";
 import { useLocation, useNavigate } from "react-router-dom";
+
+import { routes } from "../../Routes";
 
 const NavBar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [selectedTab, setSelectedTab] = useState(0);
 
-  useEffect(() => {
-    switch (location.pathname) {
-      case "/projects":
-        setSelectedTab(1);
-        break;
-      case "/experience":
-        setSelectedTab(2);
-        break;
-      case "/blog":
-        setSelectedTab(3);
-        break;
-    }
-  }, [location]);
+  const getTabIndex = () => {
+    const route = routes.findIndex((route) => route.path === location.pathname);
+    return route >= 0 ? route : 0;
+  };
 
   const changeTab = (index) => {
-    setSelectedTab(index);
-    switch (index) {
-      case 0:
-        navigate("/");
-        break;
-      case 1:
-        navigate("/projects");
-        break;
-      case 2:
-        navigate("/experience");
-        break;
-      case 3:
-        navigate("/blog");
-        break;
+    if (routes[index]) {
+      navigate(routes[index].path);
     }
   };
 
@@ -45,7 +25,7 @@ const NavBar = () => {
       align="center"
       variant="unstyled"
       onChange={(index) => changeTab(index)}
-      index={selectedTab}
+      index={getTabIndex()}
     >
       <TabList>
         <Tab

@@ -37,7 +37,6 @@ const projects = [
       "This discord bot connects to the Canvas LMS graphql API to retrieve the due dates of upcoming assignments. It implements weekly reminders and a slash command to retrieve all assignments.",
     githubURL: "https://github.com/MichaeTav/Canvas-Assignments-Discord-Bot",
   },
-
   {
     type: "project",
     title: "Shrink Tracker",
@@ -53,7 +52,7 @@ const projects = [
     title: "Sars Notifications",
     commentURL: "/sarsnotifications",
     githubCommentTitle: "sarsnotifications",
-    dateCompleted: new Date("2022-02-4"),
+    dateCompleted: new Date("2022-02-04"),
     description:
       "SARS Notifications is a browser extension that enables sound notifications when a new student enters the drop in list for SARS(an online student management system). It can only be turned on once the correct webpage is open and allows for volume adjustment. The values for the volume persist through local storage in the browser allowing for the users choice of volume to be saved.",
     githubURL: "https://github.com/MichaeTav/SARS-Notifications",

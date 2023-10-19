@@ -13,6 +13,7 @@ import {
 import { AiFillGithub, AiOutlineLink, AiOutlineComment } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import moment from "moment";
+import profilePic from "../../assets/profilepic.jpg";
 
 const ProjectCard = ({
   title,
@@ -64,11 +65,7 @@ const ProjectCard = ({
     >
       <HStack align="flex-start">
         <Circle size="48px">
-          <Image
-            borderRadius="full"
-            src="https://media.licdn.com/dms/image/C5603AQEZctssNOME8A/profile-displayphoto-shrink_800_800/0/1652107757669?e=1690416000&v=beta&t=a1OlBmfOz_OICLFOGXzllSVUNvRqY2uijTw7YjbP4Fs"
-            alt="Michael Tavera"
-          />
+          <Image borderRadius="full" src={profilePic} alt="Michael Tavera" />
         </Circle>
         <VStack align="flex-start" textAlign="left">
           <HStack>

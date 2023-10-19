@@ -12,8 +12,9 @@ import {
   Tooltip,
 } from "@chakra-ui/react";
 import { GrMap } from "react-icons/gr";
-import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { MdOutlineSchool } from "react-icons/md";
+import profilePic from "../../assets/profilepic.jpg";
 
 import HeaderImage from "../../assets/Header.jpg";
 
@@ -38,21 +39,12 @@ const ProfileHeader = () => {
               <Circle borderWidth="3px" borderColor="#242424" boxSize={size}>
                 <Image
                   borderRadius="full"
-                  src="https://media.licdn.com/dms/image/C5603AQEZctssNOME8A/profile-displayphoto-shrink_800_800/0/1652107757669?e=1690416000&v=beta&t=a1OlBmfOz_OICLFOGXzllSVUNvRqY2uijTw7YjbP4Fs"
+                  src={profilePic}
                   alt="Michael Tavera"
+                  mt="6px"
                 />
               </Circle>
             </Box>
-
-            {/* <Tooltip label="Message">
-              <Circle
-                size="40px"
-                borderWidth="2px"
-                _hover={{ background: "rgba(255, 255, 255, 0.1)" }}
-              >
-                <AiOutlineMail size="1.25rem" />
-              </Circle>
-            </Tooltip> */}
           </HStack>
           <Text fontSize="xl" fontWeight="bold">
             Michael Tavera

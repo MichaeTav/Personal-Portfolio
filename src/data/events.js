@@ -3,8 +3,20 @@ import ff from "../assets/ff-logo.png";
 import hd from "../assets/homedepot-logo.jpeg";
 import raleys from "../assets/raleys-logo.png";
 import rri from "../assets/rri-logo.jpg";
+import csusm from "../assets/csusm.jpg";
 
 const projects = [
+  {
+    type: "project",
+    title: "GenoTune",
+    commentURL: "/genotune",
+    githubCommentTitle: "genotune",
+    dateCompleted: new Date("2023-11-06"),
+    description:
+      "This was my final project for my Into to AI class. It is a music generator that uses a genetic algorithm to try and create the best tune, hence the name GenoTune.",
+    githubURL: "https://github.com/MichaeTav/genotune",
+    demoURL: "https://genotune.com/",
+  },
   {
     type: "project",
     title: "Personal Website",
@@ -62,10 +74,30 @@ const projects = [
 const experience = [
   {
     type: "experience",
+    title: "Research Assistant",
+    company: "CSUSM",
+    dateCompleted: new Date(),
+    timeRange: "March 2024 - Present",
+    logo: csusm,
+    description:
+      "Designed an online lab platform for CS courses to boost student security awareness. Collaborated with Dr. Yanayn Li at CSUSM. Backend built in Spring Boot w/ Docker for auto-grading code/exploit submissions. Frontend in React for student submissions & instructor assignment management. #Tech #EdTech #Cybersecurity #React #SpringBoot",
+  },
+  {
+    type: "experience",
+    title: "Software Developer Intern",
+    company: "R&R Industries",
+    dateCompleted: new Date(),
+    timeRange: "Oct 2023 - Present",
+    logo: rri,
+    description:
+      "Refactored internal website for more efficient API calls, reducing report load times by up to 90%. Added new features to help the sales team manage policies and gain better data insights. Also contributed to a major tech migration, transitioning the legacy system from Classic ASP and jQuery to Angular. #WebDevelopment #Angular #APIs #TechMigration",
+  },
+  {
+    type: "experience",
     title: "STEM Tutor",
     company: "MiraCosta College",
-    dateCompleted: new Date(),
-    timeRange: "Aug 2021 - Present",
+    dateCompleted: new Date("2023-05-20"),
+    timeRange: "Aug 2021 - May 2023",
     logo: mcc,
     description:
       "🎓 Tutored students in math, computer science, and physics courses as a STEM tutor at MiraCosta College. Guided individuals towards improvements in their academic performance and nurtured a profound understanding of these subjects. Continuously honed my tutoring skills while deepening my knowledge in math, computer science, and physics. Cultivated a strong sense of community and shared responsibility among fellow tutors and coaches. #STEMTutor #Mathematics #ComputerScience #Physics #AcademicSupport",

@@ -13,8 +13,6 @@ const Project = () => {
   const navigate = useNavigate();
 
   const [isSmallerThanDesktop] = useMediaQuery("(max-width: 960px)");
-
-  const [project, setProject] = useState({});
   const [borders, setBorders] = useState(isSmallerThanDesktop);
 
   const handleBack = (event) => {
@@ -26,27 +24,31 @@ const Project = () => {
     setBorders(isSmallerThanDesktop);
   }, [isSmallerThanDesktop]);
 
-  useEffect(() => {
-    switch (projectName) {
-      case "personalwebsite":
-        setProject(projects[0]);
-        break;
-      case "shrinktracker":
-        setProject(projects[3]);
-        break;
-      case "govsort":
-        setProject(projects[1]);
-        break;
-      case "discordbot":
-        setProject(projects[2]);
-        break;
-      case "sarsnotifications":
-        setProject(projects[4]);
-        break;
-      default:
-        navigate("/");
-    }
-  }, [projectName]);
+  let project;
+
+  switch (projectName) {
+    case "personalwebsite":
+      project = projects[0];
+      break;
+    case "shrinktracker":
+      project = projects[3];
+      break;
+    case "govsort":
+      project = projects[1];
+      break;
+    case "discordbot":
+      project = projects[2];
+      break;
+    case "sarsnotifications":
+      project = projects[4];
+      break;
+    case "genotune":
+      project = projects.find((p) => p.title === "GenoTune");
+      break;
+    default:
+      navigate("/");
+  }
+
   return (
     <Box backgroundColor="#242424">
       <Center>
